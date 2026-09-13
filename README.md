@@ -234,7 +234,8 @@ CartIQ's AI layer is intentionally scoped today — it's a real, working assista
 | Admin Orders | <img width="1878" height="913" alt="Admin orders page" src="https://github.com/user-attachments/assets/dccfbbfe-6a64-4bc8-b3f3-a12dfffb2274" /> |
 | Reports | <img width="1886" height="925" alt="Reports page" src="https://github.com/user-attachments/assets/c02c6f7b-d655-468b-958c-457190e9735f" /> <img width="971" height="864" alt="Reports detail" src="https://github.com/user-attachments/assets/a163e295-e256-435b-b714-a93111d9b23f" /> |
 | Analytics | <img width="1914" height="918" alt="Analytics page" src="https://github.com/user-attachments/assets/8dec189d-b713-43c3-a30a-4b0b48192377" /> |
-| Mobile | <img width="499" height="804" alt="Mobile view" src="https://github.com/user-attachments/assets/1d7fbf4f-0513-4650-8927-8a3f00bc302a" /> |
+| Mobile | <img width="499" height="804" alt="Mobile view" src="<img width="500" height="810" alt="image" src="https://github.com/user-attachments/assets/61f44ef4-4cf1-4668-992a-436124b4ca68" />
+" /> |
 
 ---
 
