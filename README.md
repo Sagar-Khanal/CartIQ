@@ -746,3 +746,5 @@ MIT — see [`LICENSE`](./LICENSE) for details.
 *Built with a real Supabase schema, real Server Actions, and an honest README.*
 
 </div>
+
+Deployment : https://ai-integrated-personalized-shopping-platform-nzovyhk29.vercel.app/
