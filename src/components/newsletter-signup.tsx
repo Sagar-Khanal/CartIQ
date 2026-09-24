@@ -369,19 +369,19 @@ export function NewsletterSignup({ subscriberCount, avatarUrls, testimonial }: N
         </div>
 
         {/* Benefit cards */}
-        <div className="mt-12 grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 grid w-full grid-cols-2 gap-3 sm:grid-cols-3 2xl:grid-cols-5">
           {BENEFITS.map((b, i) => (
             <div
               key={b.label}
-              className="cqn-rise cqn-gradient-border cqn-glass group flex flex-col items-start gap-3 rounded-2xl p-4 text-left transition-all hover:-translate-y-1"
+              className="cqn-rise cqn-gradient-border cqn-glass group flex min-w-0 flex-col items-start gap-3 rounded-2xl p-4 text-left transition-all hover:-translate-y-1"
               style={{ animationDelay: `${0.28 + i * 0.06}s` }}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#8B6CFF]/25 to-[#22C7E0]/25">
                 <b.icon className="h-4.5 w-4.5 text-[#a996ff]" />
               </span>
-              <div>
-                <p className="cqn-font text-[13px] font-semibold text-white/90">{b.label}</p>
-                <p className="cqn-font mt-0.5 text-[11.5px] leading-snug text-white/40">{b.detail}</p>
+              <div className="min-w-0">
+                <p className="cqn-font break-words text-[13px] font-semibold text-white/90">{b.label}</p>
+                <p className="cqn-font mt-0.5 break-words text-[11.5px] leading-snug text-white/40">{b.detail}</p>
               </div>
             </div>
           ))}

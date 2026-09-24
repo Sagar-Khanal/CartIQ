@@ -565,6 +565,31 @@ export function CartIQLanding({
 }) {
   const heroImage = useMemo(() => heroSlides[0]?.image, [heroSlides]);
 
+  // Homepage "Trending products": max 8, round-robin across categories
+  // (deterministic, preserves original order, no duplicates).
+  const trendingProducts = (() => {
+    const groups = new Map<string, Products>();
+    for (const product of products) {
+      const key = String(product.category ?? "uncategorized");
+      const group = groups.get(key);
+      if (group) group.push(product);
+      else groups.set(key, [product]);
+    }
+    const buckets = [...groups.values()];
+    const picked: Products = [];
+    for (let round = 0; picked.length < 8; round++) {
+      let added = false;
+      for (const bucket of buckets) {
+        if (picked.length < 8 && bucket[round]) {
+          picked.push(bucket[round]);
+          added = true;
+        }
+      }
+      if (!added) break;
+    }
+    return picked;
+  })();
+
   return (
     <div
       className={`${display.variable} ${body.variable} ${mono.variable} bg-white font-[family-name:var(--font-body)]`}
@@ -685,7 +710,7 @@ export function CartIQLanding({
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {products.map((product, i) => (
+          {trendingProducts.map((product, i) => (
             <Reveal key={product.id} delay={Math.min(i, 4) * 0.06} y={18}>
               <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
                 <ProductCard product={product} />
